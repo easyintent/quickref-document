@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<grammar
+    xmlns="http://relaxng.org/ns/structure/1.0">
+
+    <start>
+        <element name="quickref">
+            <zeroOrMore>
+                <ref name="itemElement"/>
+            </zeroOrMore>
+        </element>
+    </start>
+
+    <define name="itemElement">
+        <element name="item">
+            <attribute name="id">
+                <text/>
+            </attribute>
+            <element name="title">
+                <text/>
+            </element>
+            <element name="summary">
+                <text/>
+            </element>
+            <optional>
+                <element name="command">
+                    <text/>
+                </element>
+            </optional>
+            <optional>
+                <element name="list">
+                    <zeroOrMore>
+                        <ref name="itemElement"/>
+                    </zeroOrMore>
+                </element>
+            </optional>
+        </element>
+    </define>
+</grammar>

@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<quickref>
+    <item id="d9f3a2ee-5e14-43a2-b367-707ec416f586">
+        <title>Prepare Repository</title>
+        <summary>Start working with git repository</summary>
+        <list>
+            <item id="22ef7d0a-6c75-4daf-913b-3ed78930c5db">
+                <title>Initialize Repository</title>
+                <summary>Create new empty repository on current directory</summary>
+                <command>git init</command>
+            </item>
+            <item id="47f78db3-9524-4813-b126-341273a6d66c">
+                <title>Clone Repository</title>
+                <summary>Clone repository from URL</summary>
+                <command>git clone &lt;url&gt; &lt;dir&gt;</command>
+            </item>
+        </list>
+    </item>
+    <item id="8062ee97-2873-468e-8759-4151e5b8dfeb">
+        <title>Configuration</title>
+        <summary>Before start working with repository, it should properly configured</summary>
+        <list>
+            <item id="1c860efd-13b2-4b02-baff-bec7ab0fbf52">
+                <title>Show Configuration</title>
+                <summary>Show current configuration</summary>
+                <command>git config --list</command>
+            </item>
+            <item id="c63ccf87-3ed7-490a-bd1c-21f329c317ef">
+                <title>Set User Name</title>
+                <summary>Set commiter user name</summary>
+                <command>git config user.name &lt;"name"&gt;</command>
+            </item>
+            <item id="a5cb0392-cb8c-41b8-9f2d-15086e0e00eb">
+                <title>Set User Email</title>
+                <summary>Set commiter email address</summary>
+                <command>git config user.email &lt;"email"&gt;</command>
+            </item>
+            <item id="59e3a878-d267-4ec8-8fb7-ea1823b1f00e">
+                <title>Unix/Windows EOL Conversion</title>
+                <summary>Automatically convert between Unix and Windows end of line on commit and checkout</summary>
+                <command>git config core.autocrlf true</command>
+            </item>
+            <item id="66a884ca-3c13-463d-bb6e-3c3301110e3f">
+                <title>Configuration Scope</title>
+                <summary>--local or none for current repo, --global for user scope, --system for system scope</summary>
+                <command>git config [--global | --system] &lt;name&gt; &lt;value&gt;</command>
+            </item>
+        </list>
+    </item>
+    <item id="6c1dd424-f721-4599-b00d-e6b8d00ab537">
+        <title>Working With Repository</title>
+        <summary>Adding files, commiting changes</summary>
+        <list>
+            <item id="0bd4640d-2724-43a4-a619-4a176bc432fb">
+                <title>Show Status</title>
+                <summary>Show current directory status, what files changed</summary>
+                <command>git status</command>
+            </item>
+            <item id="0a51ed3e-ea9e-4eb0-92ed-19a547ea6ba5">
+                <title>Add File</title>
+                <summary>Add file or directory to the index for the next commit</summary>
+                <command>git add &lt;file&gt;</command>
+            </item>
+            <item id="c2d8aa7a-5245-4a18-bfdb-242f7f479a6f">
+                <title>Commit Change</title>
+                <summary>Apply the change in the index to the repository</summary>
+                <command>git commit -m ["message"]</command>
+            </item>
+            <item id="3cf0828f-d28d-47a8-ab0e-1f9a1dae5275">
+                <title>Revise Commit</title>
+                <summary>Replace last commit with current index</summary>
+                <command>git commit --amend</command>
+            </item>
+        </list>
+    </item>
+    <item id="adfbcfbf-a59d-4f27-b662-48f4559e794f">
+        <title>Manage Branch</title>
+        <summary>Create, merge, delete branch</summary>
+        <list>
+            <item id="75dcf789-e3b8-48cf-9699-217eaf2b1f40">
+                <title>Create New Branch</title>
+                <summary>Create new branch based on current branch</summary>
+                <command>git checkout -b &lt;branch-name&gt;</command>
+            </item>
+            <item id="943cac7b-30dc-450b-a501-2f8f8eec4fd9">
+                <title>Change Branch</title>
+                <summary>Change active branch</summary>
+                <command>git checkout &lt;branch-name&gt;</command>
+            </item>
+            <item id="def635bf-c0ab-442f-a524-e900eecf4a4b">
+                <title>List Branch</title>
+                <summary>List available branches</summary>
+                <command>git branch [--list]</command>
+            </item>
+            <item id="bad163b4-062f-4b2f-80a5-13a504a09b01">
+                <title>Delete Branch</title>
+                <summary>Delete already merged branches</summary>
+                <command>git branch -d &lt;branch-name&gt;</command>
+            </item>
+            <item id="a84b6004-cfe5-4b3f-97d8-df0b582c22dc">
+                <title>Force Delete Branch</title>
+                <summary>Delete branch, even unmerged. Use with caution</summary>
+                <command>git branch -D &lt;branch-name&gt;</command>
+            </item>
+            <item id="f4520d7f-6075-49fb-b953-28aba2173de9">
+                <title>Merge Branch</title>
+                <summary>Merge other branch with current branch, fast-forward if possible</summary>
+                <command>git merge &lt;other-branch&gt;</command>
+            </item>
+            <item id="6f12d9da-116c-4871-9986-1023e037713e">
+                <title>Merge With Merge Commit</title>
+                <summary>Merge other branch with merge commit</summary>
+                <command>git merge --no-ff &lt;other-branch&gt;</command>
+            </item>
+        </list>
+    </item>
+    <item id="8295e808-175d-4a05-97ec-68db6c5535ae">
+        <title>Manage Remote</title>
+        <summary>Synchronize local and remote repository</summary>
+        <list>
+            <item id="ce2c3c3f-c625-49be-870b-3451b89e1228">
+                <title>Show remote repositories</title>
+                <summary>Show current remote repositories name and url for push/fetch</summary>
+                <command>git remote -v</command>
+            </item>
+            <item id="f002d168-2aea-4775-baed-795ad893eb95">
+                <title>Add Remote Repository</title>
+                <summary>Add new remote url repository with given name</summary>
+                <command>git remote add &lt;remote-name&gt; &lt;url&gt;</command>
+            </item>
+            <item id="3fae3ab0-a234-412a-a525-a34a3b7b1e0e">
+                <title>Push Branch To Remote</title>
+                <summary>Push local branch to remote repository</summary>
+                <command>git push &lt;remote-name&gt; &lt;local-branch&gt;</command>
+            </item>
+        </list>
+    </item>
+    <item id="f34eb266-3b54-44a4-a614-b95e4128c22d">
+        <title>Manage Tags</title>
+        <summary>Manage local and remote tags</summary>
+        <list>
+            <item id="d2b02686-25da-4eb1-87f1-50ecc3170780">
+                <title>List Local Tag</title>
+                <summary>List local tags</summary>
+                <command>git tag</command>
+            </item>
+            <item id="324d24ad-7335-4f08-9ef5-2260ac0a7374">
+                <title>Add Local Tag</title>
+                <summary>Add tag to the local repository</summary>
+                <command>git tag &lt;tag&gt;</command>
+            </item>
+            <item id="a5eef94d-7f33-426f-96ef-8bde1b1e3be9">
+                <title>Delete Local Tag</title>
+                <summary>Delete a tag from local repository</summary>
+                <command>git tag -d &lt;tag&gt;</command>
+            </item>
+            <item id="bac944cd-0535-4306-899e-564a6b59eec1">
+                <title>Push Single Tag To Remote</title>
+                <summary>Push single local tag to remote repository</summary>
+                <command>git push &lt;remote-name&gt; &lt;tag&gt;</command>
+            </item>
+            <item id="bc24d790-9ac7-41ba-a9c6-eda908c19bb0">
+                <title>Push All Tag</title>
+                <summary>Push all local tags to remote repository</summary>
+                <command>git push &lt;remote-name&gt; --tags</command>
+            </item>
+            <item id="e1fa46c5-ec10-4c1f-bfdd-5f8462a7108d">
+                <title>Delete Remote Tag</title>
+                <summary>Delete a tag from remote repository</summary>
+                <command>git push --delete &lt;remote-name&gt; &lt;tag&gt;</command>
+            </item>
+        </list>
+    </item>
+</quickref>
