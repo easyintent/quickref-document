@@ -22,18 +22,16 @@
             <element name="summary">
                 <text/>
             </element>
-            <optional>
+            <choice>
                 <element name="command">
                     <text/>
                 </element>
-            </optional>
-            <optional>
                 <element name="list">
                     <zeroOrMore>
                         <ref name="itemElement"/>
                     </zeroOrMore>
                 </element>
-            </optional>
+            </choice>
         </element>
     </define>
 </grammar>

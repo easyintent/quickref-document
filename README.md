@@ -37,8 +37,9 @@ Here is sniplet of the XML document
     - Once id assigned to item, it must not changed
         - Otherwise it would break bookmark references
 - Item must have `title` and `summary` for describing itself
-- Item may have `command` to be written in console
-- Item may have `list` of more detailed reference items
+- Item must have either
+    - `command` to be written in the console
+    - `list` of zero or more reference items
 
 
 ## Packaging to Application
