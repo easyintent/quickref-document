@@ -26,6 +26,11 @@
                 <summary>Show current configuration</summary>
                 <command>git config --list</command>
             </item>
+            <item id="99852551-7a19-4fa3-8f95-5a089e7dadc7">
+                <title>Get Configuration</title>
+                <summary>Get configuration value for a configuration name</summary>
+                <command>git config --get &lt;config-name&gt;</command>
+            </item>
             <item id="c63ccf87-3ed7-490a-bd1c-21f329c317ef">
                 <title>Set User Name</title>
                 <summary>Set commiter user name</summary>
@@ -41,6 +46,21 @@
                 <summary>Automatically convert between Unix and Windows end of line on commit and checkout</summary>
                 <command>git config core.autocrlf true</command>
             </item>
+            <item id="b006e74f-47ca-4258-bc12-67292bf7d4de">
+                <title>EOL Conversion on Save Only</title>
+                <summary>Convert CRLF to LF only when commiting, use original line ending on checkout</summary>
+                <command>git config core.autocrlf input</command>
+            </item>
+            <item id="39a20488-8c18-4fe4-9f7d-6e635937a145">
+                <title>Change Editor</title>
+                <summary>Change text editor for writing commit message</summary>
+                <command>git config core.editor &lt;editor&gt;</command>
+            </item>
+            <item id="3a3f642e-8acb-4429-bf47-6db7452a56d5">
+                <title>Unset Configuration</title>
+                <summary>Unset configuration value for given configuration name</summary>
+                <command>git config --unset &lt;config-name&gt;</command>
+            </item>
             <item id="66a884ca-3c13-463d-bb6e-3c3301110e3f">
                 <title>Configuration Scope</title>
                 <summary>--local or none for current repo, --global for user scope, --system for system scope</summary>
@@ -54,23 +74,89 @@
         <list>
             <item id="0bd4640d-2724-43a4-a619-4a176bc432fb">
                 <title>Show Status</title>
-                <summary>Show current directory status, what files changed</summary>
+                <summary>Show working directory status, what files changed</summary>
                 <command>git status</command>
             </item>
             <item id="0a51ed3e-ea9e-4eb0-92ed-19a547ea6ba5">
-                <title>Add File</title>
+                <title>Add File to Index</title>
                 <summary>Add file or directory to the index for the next commit</summary>
                 <command>git add &lt;file&gt;</command>
             </item>
+            <item id="8cfc621d-f622-4639-846f-0f224d16eefd">
+                <title>Remove File from Index</title>
+                <summary>Remove file from index, file on current directory unaffected</summary>
+                <command>git reset -- &lt;file&gt;</command>
+            </item>
+            <item id="9bd5fc88-0ad1-4ce1-8b7a-cac3e5bb9a36">
+                <title>Discard Modification</title>
+                <summary>Discard file modification, restore file from index</summary>
+                <command>git checkout -- &lt;file&gt;</command>
+            </item>
+            <item id="b0700e34-071a-4b11-bedb-f3abf2905b82">
+                <title>Delete File</title>
+                <summary>Delete file in the working directory and the index</summary>
+                <command>git rm &lt;file&gt;</command>
+            </item>
             <item id="c2d8aa7a-5245-4a18-bfdb-242f7f479a6f">
                 <title>Commit Change</title>
-                <summary>Apply the change in the index to the repository</summary>
+                <summary>Apply changes in the index with given commit massage</summary>
                 <command>git commit -m ["message"]</command>
             </item>
             <item id="3cf0828f-d28d-47a8-ab0e-1f9a1dae5275">
                 <title>Revise Commit</title>
                 <summary>Replace last commit with current index</summary>
                 <command>git commit --amend</command>
+            </item>
+            <item id="e96e23f2-5576-4bdf-87ef-1b1454c94acc">
+                <title>Show Commit Log</title>
+                <summary>Show commit logs, limit showing &lt;number&gt; commits</summary>
+                <command>git log [-n &lt;number&gt;]</command>
+            </item>
+            <item id="adc40707-789c-4add-a8ab-3dedf7d87427">
+                <title>Diff Working Directory</title>
+                <summary>Show diff between index and working directory</summary>
+                <command>git diff</command>
+            </item>
+            <item id="f490d675-8c6d-42af-93ee-7d00a27ac77b">
+                <title>Diff Working Directory and Branch</title>
+                <summary>Show diff between branch and working directory</summary>
+                <command>git diff &lt;branch-name&gt;</command>
+            </item>
+            <item id="c19a66d7-9428-456e-bc9e-7047d792b7b0">
+                <title>Show Diff Between Branches</title>
+                <summary>Show diff between two branches</summary>
+                <command>git diff &lt;branch-1&gt; &lt;branch-2&gt;</command>
+            </item>
+        </list>
+    </item>
+    <item id="7aaef564-5281-4040-8002-0f8ff9b2ea0a">
+        <title>Stash Working Directory</title>
+        <summary>Save and restore working directory state</summary>
+        <list>
+            <item id="e41b3210-34ca-47b8-bdde-e98a3483f956">
+                <title>Stash Working Directory</title>
+                <summary>Save changes to new stash and clean up working directory</summary>
+                <command>git stash save</command>
+            </item>
+            <item id="abf41d60-815f-4d69-9155-7e6ba6726e62">
+                <title>List Stashes</title>
+                <summary>List stashes, stash@{0} is last stash</summary>
+                <command>git stash list</command>
+            </item>
+            <item id="dbc2e739-1ce1-4a35-aee7-1bdb483cf3af">
+                <title>Restore Stash</title>
+                <summary>Restore last stash and apply to working directory</summary>
+                <command>git stash pop</command>
+            </item>
+            <item id="b8873c1c-55a4-4b60-8bac-6e0e138d12a3">
+                <title>Remove Last Stash</title>
+                <summary>Remove last stash, saved changes will be discarded</summary>
+                <command>git stash drop</command>
+            </item>
+            <item id="7cb63ffb-69b5-4657-82ff-0306c690aa65">
+                <title>Clear Stashes</title>
+                <summary>Remove all stashes, all saved changes will be discarded</summary>
+                <command>git stash clear</command>
             </item>
         </list>
     </item>
@@ -80,18 +166,43 @@
         <list>
             <item id="75dcf789-e3b8-48cf-9699-217eaf2b1f40">
                 <title>Create New Branch</title>
-                <summary>Create new branch based on current branch</summary>
+                <summary>Create new branch from current branch</summary>
                 <command>git checkout -b &lt;branch-name&gt;</command>
             </item>
             <item id="943cac7b-30dc-450b-a501-2f8f8eec4fd9">
-                <title>Change Branch</title>
+                <title>Switch Branch</title>
                 <summary>Change active branch</summary>
                 <command>git checkout &lt;branch-name&gt;</command>
             </item>
+            <item id="5c72b2d1-3cad-4374-a00a-d316c00ca6f4">
+                <title>Checkout to Previous Commit</title>
+                <summary>Detach head and switch to previous commit. Where ~1 is previous commit, ~2 is previous 2 commits, etc.</summary>
+                <command>git checkout &lt;HEAD~1&gt;</command>
+            </item>
+            <item id="3aae1196-87fd-47ec-828c-7b61aeef256f">
+                <title>Detach Branch</title>
+                <summary>Detach head from current branch</summary>
+                <command>git checkout --detach</command>
+            </item>
+            <item id="882ddd2b-bf74-41bd-8d1d-76a8c940e0b3">
+                <title>Reset Current Head</title>
+                <summary>Move current branch head to commit-name. Changes in index AND working directory are discarded. Potentially causing commits after commit-name lose. Use with caution</summary>
+                <command>git reset --hard &lt;commit-name&gt;</command>
+            </item>
             <item id="def635bf-c0ab-442f-a524-e900eecf4a4b">
                 <title>List Branch</title>
-                <summary>List available branches</summary>
+                <summary>List local branches</summary>
                 <command>git branch [--list]</command>
+            </item>
+            <item id="aed55f1d-7dfd-42b5-8b71-dd09c5736958">
+                <title>List Remote Tracking Branch</title>
+                <summary>List remote tracking branches</summary>
+                <command>git branch -r</command>
+            </item>
+            <item id="6fe49b91-6b51-4cf9-a080-0a3e24b1cfff">
+                <title>List Local and Remote Tracking Branch</title>
+                <summary>List both local and remote-tracking branches</summary>
+                <command>git branch -a</command>
             </item>
             <item id="bad163b4-062f-4b2f-80a5-13a504a09b01">
                 <title>Delete Branch</title>
@@ -109,9 +220,14 @@
                 <command>git merge &lt;other-branch&gt;</command>
             </item>
             <item id="6f12d9da-116c-4871-9986-1023e037713e">
-                <title>Merge With Merge Commit</title>
-                <summary>Merge other branch with merge commit</summary>
+                <title>Merge Using Merge Commit</title>
+                <summary>Merge other branch, use merge commit</summary>
                 <command>git merge --no-ff &lt;other-branch&gt;</command>
+            </item>
+            <item id="2740ac26-f1d0-43a2-8522-ba8b94ccf804">
+                <title>Interactive Branch Rebase</title>
+                <summary>Rebase current branch with other branch interactively</summary>
+                <command>git rebase -i &lt;other-branch&gt;</command>
             </item>
         </list>
     </item>
@@ -121,18 +237,28 @@
         <list>
             <item id="ce2c3c3f-c625-49be-870b-3451b89e1228">
                 <title>Show remote repositories</title>
-                <summary>Show current remote repositories name and url for push/fetch</summary>
+                <summary>Show remote repositories name and url for push/fetch</summary>
                 <command>git remote -v</command>
             </item>
             <item id="f002d168-2aea-4775-baed-795ad893eb95">
                 <title>Add Remote Repository</title>
-                <summary>Add new remote url repository with given name</summary>
+                <summary>Add new remote repository with given remote name</summary>
                 <command>git remote add &lt;remote-name&gt; &lt;url&gt;</command>
             </item>
             <item id="3fae3ab0-a234-412a-a525-a34a3b7b1e0e">
-                <title>Push Branch To Remote</title>
+                <title>Push Branch to Remote</title>
                 <summary>Push local branch to remote repository</summary>
                 <command>git push &lt;remote-name&gt; &lt;local-branch&gt;</command>
+            </item>
+            <item id="c5369eb7-fa30-4307-979f-056255c2ae58">
+                <title>Fetch from Remote</title>
+                <summary>Update remote-tracking branches. Remote-tracking branches are NOT merged with local branches. Use git branch -r to list remote-tracking branches</summary>
+                <command>git fetch &lt;remote-name&gt;</command>
+            </item>
+            <item id="c3dbe1ad-ed95-4699-a878-4c62a7d98d26">
+                <title>Pull from Remote</title>
+                <summary>Retrieve objects from remote branches, and merge with current branch. Use with caution</summary>
+                <command>git pull &lt;remote-name&gt; &lt;remote-branch&gt;</command>
             </item>
         </list>
     </item>
@@ -142,33 +268,33 @@
         <list>
             <item id="d2b02686-25da-4eb1-87f1-50ecc3170780">
                 <title>List Local Tag</title>
-                <summary>List local tags</summary>
+                <summary>List available tags in local repository</summary>
                 <command>git tag</command>
             </item>
             <item id="324d24ad-7335-4f08-9ef5-2260ac0a7374">
                 <title>Add Local Tag</title>
-                <summary>Add tag to the local repository</summary>
-                <command>git tag &lt;tag&gt;</command>
+                <summary>Create new tag in the local repository</summary>
+                <command>git tag &lt;tag-name&gt;</command>
             </item>
             <item id="a5eef94d-7f33-426f-96ef-8bde1b1e3be9">
                 <title>Delete Local Tag</title>
                 <summary>Delete a tag from local repository</summary>
-                <command>git tag -d &lt;tag&gt;</command>
+                <command>git tag -d &lt;tag-name&gt;</command>
             </item>
             <item id="bac944cd-0535-4306-899e-564a6b59eec1">
-                <title>Push Single Tag To Remote</title>
+                <title>Push Tag</title>
                 <summary>Push single local tag to remote repository</summary>
-                <command>git push &lt;remote-name&gt; &lt;tag&gt;</command>
+                <command>git push &lt;remote-name&gt; &lt;tag-name&gt;</command>
             </item>
             <item id="bc24d790-9ac7-41ba-a9c6-eda908c19bb0">
-                <title>Push All Tag</title>
+                <title>Push All Tags</title>
                 <summary>Push all local tags to remote repository</summary>
-                <command>git push &lt;remote-name&gt; --tags</command>
+                <command>git push --tags &lt;remote-name&gt;</command>
             </item>
             <item id="e1fa46c5-ec10-4c1f-bfdd-5f8462a7108d">
                 <title>Delete Remote Tag</title>
                 <summary>Delete a tag from remote repository</summary>
-                <command>git push --delete &lt;remote-name&gt; &lt;tag&gt;</command>
+                <command>git push --delete &lt;remote-name&gt; &lt;tag-name&gt;</command>
             </item>
         </list>
     </item>
