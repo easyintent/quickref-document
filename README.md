@@ -3,9 +3,8 @@
 
 Repository of reference document for android application
 ["Git Quick Reference"](https://github.com/easyintent/quickref).
-This repository is the actual content of that application.
-The document is written in XML to make it
-easier to edit and validate.
+This repository contains the quick reference document (the "cheatsheet").
+It is written in XML to make it easier to edit and validate.
 
 ## XML Structure
 
@@ -31,11 +30,11 @@ Here is sniplet of the XML document
 
 - Top level tag is `quickref`
     - Contains zero more `item`
-    - Each item directly under `quickref` is top level category
+    - Items directly under `quickref` tag are top level categories
 - Item must have an `id` with unique UUID value
     - Id is unique for entire document, it can be generated using `uuidgen`
     - Once id assigned to item, it must not changed
-        - Otherwise it would break bookmark references
+        - Otherwise it would break saved favorite references
 - Item must have `title` and `summary` for describing itself
 - Item must have either
     - `command` to be written in the console
@@ -54,13 +53,14 @@ script `mkquickref.py` in this repository for conversion.
 
 Below programs are required for conversion
 
-- Python 3.x, for running `mkquickref.py` itself
-- GNU Make, for executing `Makefile`
-- Xmllint, for validating XML
+- [Python 3.x](http://python.org/), for running `mkquickref.py` itself
+- [GNU Make](https://www.gnu.org/software/make/), for executing `Makefile`
+- [Xmllint](http://xmlsoft.org/), for validating XML
 
 Consult distribution package manager to install
-these programs. If you are using MS Windows,
-it is easier to run under Cygwin or msys2.
+these programs. If you are using Windows,
+it is easier to run under [Cygwin](http://cygwin.com/)
+or [MSYS2](http://msys2.github.io/).
 
 ### Converting XML to SQLite Database
 
@@ -75,3 +75,8 @@ Go to android git quick reference application project,
 copy `quickref.sqlite` to the `assets` folder and increase
 database version number in the `version.properties` file.
 Build and run the application.
+
+# License
+
+Licensed under same license as the
+[android application](https://github.com/easyintent/quickref).
