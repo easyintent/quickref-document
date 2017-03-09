@@ -84,6 +84,7 @@ def quickref_tree_to_sqlite(quickref_tree, sqlite_file):
     cur.execute(REBUILD_INDEX)
 
     conn.commit()
+    conn.close()
 
 
 # Convert single <item> tag to dictionary, recursively.
