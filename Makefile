@@ -6,7 +6,7 @@ SOURCE=quickref.xml
 TARGET=quickref.sqlite
 SCHEMA=quickref.rng
 
-all: clean validate $(TARGET)
+update: clean validate $(TARGET)
 
 $(TARGET): $(SOURCE)
 	./mkquickref.py $(SOURCE) $@
