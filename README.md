@@ -2,7 +2,7 @@
 # Git Quick Reference Document
 
 Repository of reference document for android application
-"Git Quick Reference".
+["Git Quick Reference"](https://github.com/easyintent/quickref).
 This repository is the actual content of that application.
 The document is written in XML to make it
 easier to edit and validate.
