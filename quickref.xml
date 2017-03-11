@@ -274,12 +274,12 @@
             <item id="3fae3ab0-a234-412a-a525-a34a3b7b1e0e">
                 <title>Push Branch to Remote</title>
                 <summary>Push local branch to remote repository</summary>
-                <command>git push &lt;remote-name&gt; &lt;local-branch&gt;</command>
+                <command>git push &lt;remote-name&gt; &lt;branch-name&gt;</command>
             </item>
             <item id="5793af9f-4226-4750-8ca0-3084cff04fb6">
                 <title>Delete Remote Branch</title>
                 <summary>Delete a branch from remote repository</summary>
-                <command>git push --delete &lt;remote-name&gt; &lt;remote-branch&gt;</command>
+                <command>git push --delete &lt;remote-name&gt; &lt;branch-name&gt;</command>
             </item>
             <item id="bac944cd-0535-4306-899e-564a6b59eec1">
                 <title>Push Tag</title>
@@ -298,13 +298,13 @@
             </item>
             <item id="c5369eb7-fa30-4307-979f-056255c2ae58">
                 <title>Fetch from Remote</title>
-                <summary>Update remote-tracking branches. Remote-tracking branches are NOT merged with local branches. Use git branch -r to list remote-tracking branches.</summary>
+                <summary>Update remote-tracking branches. Remote-tracking branches are NOT automatically merged with local branches. Use git branch -r to list remote-tracking branches.</summary>
                 <command>git fetch &lt;remote-name&gt;</command>
             </item>
             <item id="c3dbe1ad-ed95-4699-a878-4c62a7d98d26">
                 <title>Pull from Remote</title>
                 <summary>Retrieve objects from remote branches, and merge with current branch. Use with caution.</summary>
-                <command>git pull &lt;remote-name&gt; &lt;remote-branch&gt;</command>
+                <command>git pull &lt;remote-name&gt; &lt;branch-name&gt;</command>
             </item>
         </list>
     </item>
