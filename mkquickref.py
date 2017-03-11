@@ -128,7 +128,7 @@ def _flatten_item(items, parent_id):
         row = {
             'id': id,
             'parent_id': parent_id,
-            'leaf': children == None,
+            'leaf': children is None,
             'priority': priority,
             'title': title,
             'summary':  summary,
@@ -141,7 +141,7 @@ def _flatten_item(items, parent_id):
         priority = priority + 1
 
         # flatten children
-        if children != None:
+        if children is not None:
             children_rows = _flatten_item(children, id)
             rows.extend(children_rows)
 
