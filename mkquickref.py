@@ -2,6 +2,7 @@
 
 import sys
 import sqlite3
+import uuid
 import xml.etree.ElementTree as et
 
 # The reference table
@@ -119,14 +120,17 @@ def _flatten_item(items, parent_id):
 
     for item in items:
 
-        id = item.get('id')
+        unique_id = item.get('id')
         title = item.get('title')
         summary = item.get('summary')
         command = item.get('command')
         children = item.get('list')
 
+        # make sure it is valid UUID
+        unique_id = str(uuid.UUID(unique_id))
+
         row = {
-            'id': id,
+            'id': unique_id,
             'parent_id': parent_id,
             'leaf': children is None,
             'priority': priority,
@@ -142,7 +146,7 @@ def _flatten_item(items, parent_id):
 
         # flatten children
         if children is not None:
-            children_rows = _flatten_item(children, id)
+            children_rows = _flatten_item(children, unique_id)
             rows.extend(children_rows)
 
     return rows
