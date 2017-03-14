@@ -112,6 +112,16 @@
                 <summary>Show commit logs, limit showing &lt;number&gt; commits</summary>
                 <command>git log [-n &lt;number&gt;]</command>
             </item>
+            <item id="9142bf22-e4d7-432c-900c-e8534fbd2ec8">
+                <title>Show Short Log</title>
+                <summary>Show shorter commit log</summary>
+                <command>git shortlog</command>
+            </item>
+            <item id="3c150b89-cd61-4e18-bf8a-76ac79c2f1d0">
+                <title>Short Log Summary</title>
+                <summary>Show even shorter commit count summary</summary>
+                <command>git shortlog -s</command>
+            </item>           
             <item id="adc40707-789c-4add-a8ab-3dedf7d87427">
                 <title>Diff Working Directory</title>
                 <summary>Show diff between index and working directory</summary>
@@ -123,7 +133,7 @@
                 <command>git diff &lt;branch-name&gt;</command>
             </item>
             <item id="c19a66d7-9428-456e-bc9e-7047d792b7b0">
-                <title>Show Diff Between Branches</title>
+                <title>Show Diff between Branches</title>
                 <summary>Show diff between two branches</summary>
                 <command>git diff &lt;branch-1&gt; &lt;branch-2&gt;</command>
             </item>
@@ -318,7 +328,7 @@
                 <command>git gc</command>
             </item>
             <item id="493328c6-7e84-44ca-aa80-daf9d07694ad">
-                <title>Optimize Repository If Required</title>
+                <title>Optimize Repository if Required</title>
                 <summary>Check and run gc only if required, otherwise exit without doing gc</summary>
                 <command>git gc --auto</command>
             </item>
