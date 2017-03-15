@@ -52,6 +52,11 @@ def quickref_xml_to_tree(xml_file):
     xml_tree = et.parse(xml_file)
     xml_root = xml_tree.getroot()
 
+    if xml_root.tag != 'quickref':
+        raise ValueError(
+            "Root element must be quickref', "
+            "found '{0}'".format(xml_root.tag))
+
     items = []
 
     for xml_child in xml_root:
@@ -65,13 +70,13 @@ def quickref_xml_to_tree(xml_file):
 #
 def quickref_tree_to_sqlite(quickref_tree, sqlite_file):
 
+    items = quickref_tree['quickref']
+
     conn = sqlite3.connect(sqlite_file)    
     cur = conn.cursor()
 
     cur.execute(CREATE_TABLE)
     cur.execute(CREATE_SEARCH_TABLE)
-
-    items = quickref_tree['quickref']
 
     # flatten the dictionary tree
     rows = _flatten_item(items, None)
