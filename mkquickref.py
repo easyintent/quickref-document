@@ -103,14 +103,18 @@ def _parse_xml_item(xml_item):
     item['id'] = xml_item.get('id')
 
     children = []
+    known_tags = ('title', 'summary', 'command')
 
     for i in xml_item:
         if i.tag == 'list':
             for j in i:
                 sub_item = _parse_xml_item(j)
                 children.append(sub_item)
-        else:
+        elif i.tag in known_tags:
             item[i.tag] = i.text
+        else:
+            raise ValueError(
+                "Unexpected XML tag '{0}'".format(i.tag))
 
     if children:
         item['list'] = children
