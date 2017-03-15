@@ -1,14 +1,15 @@
 
 # Git Quick Reference Document
 
-Repository of reference document (the "cheatsheet") for android application
-["Git Quick Reference"](https://github.com/easyintent/quickref).
+Repository of reference document (the "cheat sheet") for
+[Git Quick Reference](https://github.com/easyintent/quickref)
+android application.
 It is written in XML to make it easier to edit and validate.
 
 ## XML Structure
 
 The [quickref.xml](quickref.xml) document is pretty
-much self explainatory. XML schema describing valid
+much self explainatory. RELAX NG schema describing valid
 XML document can be found in the [quickref.rng](quickref.rng).
 Here is sniplet of the XML document
 
@@ -28,7 +29,7 @@ Here is sniplet of the XML document
 
 
 - Top level tag is `quickref`
-    - Contains zero more `item`
+    - Contains zero or more `item`
     - Items directly under `quickref` tag are top level categories
 - Item must have an `id` with unique UUID value
     - Id is unique for entire document, it can be generated using `uuidgen`
@@ -48,7 +49,7 @@ The XML document must be converted to SQLite database
 before included in the application. Use simple python
 script `mkquickref.py` in this repository for conversion.
 
-### Required Program
+### Required Programs
 
 Below programs are required for conversion
 
@@ -60,6 +61,8 @@ Consult distribution package manager to install
 these programs. If you are using Windows,
 it is easier to run under [Cygwin](http://cygwin.com/)
 or [MSYS2](http://msys2.github.io/).
+Running mkquickref.py directly is possible, but the script expect
+valid xml input, hence it rely on xmllint validation.
 
 ### Converting XML to SQLite Database
 
