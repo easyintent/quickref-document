@@ -51,11 +51,13 @@ def quickref_xml_to_sqlite(src_file, dst_file):
 def quickref_xml_to_tree(xml_file):
     xml_tree = et.parse(xml_file)
     xml_root = xml_tree.getroot()
+    
+    root_tag = xml_root.tag
 
-    if xml_root.tag != 'quickref':
+    if root_tag != 'quickref':
         raise ValueError(
-            "Root element must be quickref', "
-            "found '{0}'".format(xml_root.tag))
+            "Root element must be 'quickref', "
+            "found '{0}'".format(root_tag))
 
     items = []
 
@@ -63,7 +65,7 @@ def quickref_xml_to_tree(xml_file):
         item = _parse_xml_item(xml_child)
         items.append(item)
 
-    return {'quickref': items}
+    return {root_tag: items}
 
 
 # Convert quickref dictionary tree to sqlite table.
