@@ -41,7 +41,7 @@ REBUILD_INDEX = '''
 
 # Convert quickref XML file to SQLite database
 #
-def quickref_xml2sqlite(src_file, dst_file):
+def quickref_xml_to_sqlite(src_file, dst_file):
     quickref_tree = quickref_xml_to_tree(src_file)
     quickref_tree_to_sqlite(quickref_tree, dst_file)
 
@@ -111,7 +111,7 @@ def _parse_xml_item(xml_item):
     return item
 
 
-# flatten children of items, recursively.
+# Flatten children of items, recursively.
 #
 def _flatten_item(items, parent_id):
 
@@ -156,6 +156,6 @@ if __name__ == '__main__':
     if len(sys.argv) == 3:
         src_file = sys.argv[1]
         dst_file = sys.argv[2]
-        quickref_xml2sqlite(src_file, dst_file)
+        quickref_xml_to_sqlite(src_file, dst_file)
     else:
         print('usage: mkquickref.py input.xml output.sqlite')
