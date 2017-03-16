@@ -44,7 +44,7 @@ Here is sniplet of the XML document
 ## Packaging to Application
 
 Current application only accept reference document as
-SQLite database with full text search `fft4`.
+[SQLite](http://sqlite.org/) database with full text search `fts4`.
 The XML document must be converted to SQLite database
 before included in the application. Use simple python
 script `mkquickref.py` in this repository for conversion.
@@ -74,8 +74,9 @@ If conversion done without error, `quickref.sqlite` will be
 generated on the same directory.
 
 Go to android git quick reference application project,
-copy `quickref.sqlite` to the `assets` folder and increase
-database version number in the `version.properties` file.
+copy `quickref.sqlite` to the
+[`assets`](https://github.com/easyintent/quickref/tree/master/app/src/main/assets)
+folder and increase database version number in the `version.properties` file.
 Build and run the application.
 
 # License
