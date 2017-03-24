@@ -28,12 +28,12 @@
             </item>
             <item id="c63ccf87-3ed7-490a-bd1c-21f329c317ef">
                 <title>Set User Name</title>
-                <summary>Set commiter user name</summary>
+                <summary>Set committer user name</summary>
                 <command>git config user.name &lt;"name"&gt;</command>
             </item>
             <item id="a5cb0392-cb8c-41b8-9f2d-15086e0e00eb">
                 <title>Set User Email</title>
-                <summary>Set commiter email address</summary>
+                <summary>Set committer email address</summary>
                 <command>git config user.email &lt;"email"&gt;</command>
             </item>
             <item id="59e3a878-d267-4ec8-8fb7-ea1823b1f00e">
