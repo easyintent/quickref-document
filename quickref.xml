@@ -137,6 +137,11 @@
                 <summary>Show diff between two branches</summary>
                 <command>git diff &lt;branch-1&gt; &lt;branch-2&gt;</command>
             </item>
+            <item id="b44657de-c49a-4b80-be7a-0551fce8c2aa">
+                <title>Remove Untracked Files</title>
+                <summary>Interactively remove untracked files from repository</summary>
+                <command>git clean -i</command>
+            </item>           
         </list>
     </item>
     <item id="adfbcfbf-a59d-4f27-b662-48f4559e794f">
@@ -336,11 +341,6 @@
                 <title>Check Repository</title>
                 <summary>Check integrity of objects in the repository</summary>
                 <command>git fsck</command>
-            </item>
-            <item id="b44657de-c49a-4b80-be7a-0551fce8c2aa">
-                <title>Remove Untracked Files</title>
-                <summary>Interactively remove untracked files from repository</summary>
-                <command>git clean -i</command>
             </item>
         </list>
     </item>
