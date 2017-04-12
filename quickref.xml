@@ -104,22 +104,22 @@
             </item>
             <item id="3cf0828f-d28d-47a8-ab0e-1f9a1dae5275">
                 <title>Revise Commit</title>
-                <summary>Replace last commit with current index</summary>
+                <summary>Replace last commit of the current branch with current index</summary>
                 <command>git commit --amend</command>
             </item>
             <item id="1977d8bf-8b5c-44bb-837f-4574fdb4f7f4">
                 <title>Reset Author</title>
-                <summary>Reset last commit author and date to current committer</summary>
+                <summary>Amend commit author and author date to the committer</summary>
                 <command>git commit --amend --reset-author</command>
             </item>
             <item id="2e7e7c4c-71d7-4c5a-8569-58efedd03813">
                 <title>Change Author</title>
-                <summary>Change last commit author with given author name and email, author date unchanged</summary>
+                <summary>Amend commit author with given author name and email, author date unchanged</summary>
                 <command>git commit --amend --author="Author Name &lt;email&gt;"</command>
             </item>
             <item id="4d910de2-fc99-4caf-beb0-8375c11bbf5a">
                 <title>Change Author Date</title>
-                <summary>Change last commit date, use ISO 8601 format for convenience</summary>
+                <summary>Amend author date, use ISO 8601 format for convenience</summary>
                 <command>git commit --amend --date="1999-12-31T23:59:59"</command>
             </item>
             <item id="e96e23f2-5576-4bdf-87ef-1b1454c94acc">
