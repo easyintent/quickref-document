@@ -3,11 +3,11 @@
 <quickref>
     <item id="d9f3a2ee-5e14-43a2-b367-707ec416f586">
         <title>Prepare Repository</title>
-        <summary>Start working with git repository</summary>
+        <summary>Start working with a git repository</summary>
         <list>
             <item id="22ef7d0a-6c75-4daf-913b-3ed78930c5db">
                 <title>Initialize Repository</title>
-                <summary>Create new empty repository on current directory</summary>
+                <summary>Create new empty repository in current directory</summary>
                 <command>git init</command>
             </item>
             <item id="47f78db3-9524-4813-b126-341273a6d66c">
@@ -19,7 +19,7 @@
     </item>
     <item id="8062ee97-2873-468e-8759-4151e5b8dfeb">
         <title>Configuration</title>
-        <summary>Before start working with repository, it should properly configured</summary>
+        <summary>Before you start working with a repository, it should be properly configured</summary>
         <list>
             <item id="1c860efd-13b2-4b02-baff-bec7ab0fbf52">
                 <title>Show Configurations</title>
@@ -99,7 +99,7 @@
             </item>
             <item id="c2d8aa7a-5245-4a18-bfdb-242f7f479a6f">
                 <title>Commit Change</title>
-                <summary>Apply changes in the index with given commit massage</summary>
+                <summary>Apply changes in the index with given commit message</summary>
                 <command>git commit -m ["message"]</command>
             </item>
             <item id="3cf0828f-d28d-47a8-ab0e-1f9a1dae5275">
@@ -344,7 +344,7 @@
         <list>
             <item id="2431b4ae-54d4-4258-bce7-df88e8857c05">
                 <title>Optimize Repository</title>
-                <summary>Remove unecessary files and references, optimize repository. It is good idea to run gc periodically.</summary>
+                <summary>Remove unnecessary files and references, optimize repository. It is a good idea to run gc periodically.</summary>
                 <command>git gc</command>
             </item>
             <item id="493328c6-7e84-44ca-aa80-daf9d07694ad">
