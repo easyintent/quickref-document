@@ -82,6 +82,11 @@
                 <summary>Add file or directory to the index for the next commit</summary>
                 <command>git add &lt;file&gt;</command>
             </item>
+            <item id="6302c1ec-e339-47e1-8650-2c28785b1df4">
+                <title>Add Modified Files</title>
+                <summary>Update modified files to the index, it will not add new files</summary>
+                <command>git add -u</command>
+            </item>
             <item id="8cfc621d-f622-4639-846f-0f224d16eefd">
                 <title>Remove File from Index</title>
                 <summary>Remove file from index, file on current directory unaffected</summary>
@@ -152,11 +157,16 @@
                 <summary>Show diff between two branches</summary>
                 <command>git diff &lt;branch-1&gt; &lt;branch-2&gt;</command>
             </item>
+            <item id="15de42ca-7558-4e35-a6bc-0a0efae80393">
+                <title>Dry-run Clean</title>
+                <summary>See what would be done by git clean command</summary>
+                <command>git clean -n</command>
+            </item>
             <item id="b44657de-c49a-4b80-be7a-0551fce8c2aa">
                 <title>Remove Untracked Files</title>
                 <summary>Interactively remove untracked files from repository</summary>
                 <command>git clean -i</command>
-            </item>           
+            </item>
         </list>
     </item>
     <item id="adfbcfbf-a59d-4f27-b662-48f4559e794f">
@@ -202,6 +212,21 @@
                 <title>List Remote Tracking Branches</title>
                 <summary>List remote tracking branches</summary>
                 <command>git branch -r</command>
+            </item>
+            <item id="0c4f382b-b9a7-4584-af23-24f4f7c9a7fb">
+                <title>List Branches With Commit Message</title>
+                <summary>List branches with commit message and hash</summary>
+                <command>git branch -v</command>
+            </item>
+            <item id="ec34fd1e-1df3-4885-8b78-a7f87fd97986">
+                <title>Sort Branches By Committer Date</title>
+                <summary>List branches with commit message and hash, sort by committer date</summary>
+                <command>git branch -v --sort=committerdate</command>
+            </item>
+            <item id="c377e42e-8022-4400-b28b-5da2342c58c1">
+                <title>Sort Branches By Author Date</title>
+                <summary>List branches with commit message and hash, sort by author date</summary>
+                <command>git branch -v --sort=authordate</command>
             </item>
             <item id="6fe49b91-6b51-4cf9-a080-0a3e24b1cfff">
                 <title>List All Branches</title>
