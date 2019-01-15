@@ -94,7 +94,6 @@ def quickref_tree_to_sqlite(quickref_tree, sqlite_file):
     conn.commit()
     conn.close()
 
-
 # Convert single <item> tag to dictionary, recursively.
 #
 def _parse_xml_item(xml_item):
@@ -107,9 +106,7 @@ def _parse_xml_item(xml_item):
 
     for i in xml_item:
         if i.tag == 'list':
-            for j in i:
-                sub_item = _parse_xml_item(j)
-                children.append(sub_item)
+            children.extend(_parse_xml_list(i))
         elif i.tag in known_tags:
             item[i.tag] = i.text
         else:
@@ -121,6 +118,15 @@ def _parse_xml_item(xml_item):
 
     return item
 
+# Convert <list> children to list
+#
+def _parse_xml_list(list_element):
+    children = []
+    for i in list_element:
+        item = _parse_xml_item(i)
+        children.append(item)
+
+    return children
 
 # Flatten children of items, recursively.
 #
