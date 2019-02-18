@@ -214,18 +214,18 @@
                 <command>git branch -r</command>
             </item>
             <item id="0c4f382b-b9a7-4584-af23-24f4f7c9a7fb">
-                <title>List Branches With Commit Message</title>
-                <summary>List branches with commit message and hash</summary>
+                <title>List Branches and Commit Message</title>
+                <summary>List branches, hash, and commit message</summary>
                 <command>git branch -v</command>
             </item>
             <item id="ec34fd1e-1df3-4885-8b78-a7f87fd97986">
                 <title>Sort Branches By Committer Date</title>
-                <summary>List branches with commit message and hash, sort by committer date</summary>
+                <summary>List branches, hash, and commit message, sort by committer date</summary>
                 <command>git branch -v --sort=committerdate</command>
             </item>
             <item id="c377e42e-8022-4400-b28b-5da2342c58c1">
                 <title>Sort Branches By Author Date</title>
-                <summary>List branches with commit message and hash, sort by author date</summary>
+                <summary>List branches, hash, and commit message, sort by author date</summary>
                 <command>git branch -v --sort=authordate</command>
             </item>
             <item id="6fe49b91-6b51-4cf9-a080-0a3e24b1cfff">
